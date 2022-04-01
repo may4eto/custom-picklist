@@ -1,0 +1,34 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="wrapper">
+  <h2>Search shopping list</h2>
+  <div>
+    <div class="input">
+      <input [(ngModel)]="searchTerm" type="text" (focus)="showPickList()" />
+      <button *ngIf="searchTerm" (click)="clearSearch()">
+        <close></close>
+      </button>
+      <button
+        *ngIf="!searchTerm"
+        (click)="!isPickListVisible ? showPickList() : hidePickList()"
+      >
+        <chevron [isChevronUp]="isPickListVisible ? true : false"></chevron>
+      </button>
+    </div>
+    <div class="picklist" [ngClass]="isPickListVisible ? 'show' : 'hide'">
+      <ul>
+        <li
+          *ngFor="let option of options | filter:searchTerm"
+          (click)="select($event)"
+        >
+          {{option}}
+        </li>
+        <li
+          class="no-results"
+          *ngIf="(options | filter:searchTerm).length ===0"
+        >
+          Nothing found
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

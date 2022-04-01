@@ -1,0 +1,8 @@
+#chevron svg {
+  height: 16px;
+  width: auto;
+}
+.chevron-up {
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg) translateY(15%);
+}

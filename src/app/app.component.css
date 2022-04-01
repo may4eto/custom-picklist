@@ -1,0 +1,50 @@
+.wrapper {
+  margin: 40px 20px;
+}
+
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+
+.input {
+  position: relative;
+  max-width: 150px;
+}
+.input input {
+  width: 100%;
+}
+.picklist {
+  max-height: 80px;
+  width: 150px;
+  overflow-y: auto;
+  margin-top: 5px;
+  padding: 3px;
+  border: solid 1px #585858;
+  border-radius: 2px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+li:not(.no-results):hover {
+  background-color: lightgrey;
+}
+li.no-results {
+  color: darkgrey;
+  font-style: italic;
+}
+button {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: absolute;
+  top: 2px;
+  right: -10px;
+}
